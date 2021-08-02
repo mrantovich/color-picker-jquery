@@ -1,0 +1,137 @@
+@import 'colors';
+@import 'fonts';
+
+html, body {
+	width: 100%;
+	font-family: sans-serif;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+}
+
+.wrapper {
+	width: 100%;
+	overflow: hidden;
+}
+
+.container {
+	max-width: 1200px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.form {
+	min-height: 80px;
+
+	&__fieldset {
+		height: 80px;
+		display: flex;
+		align-items: center;
+	}
+
+	&__legend {
+	}
+
+	&__button {
+	}
+}
+
+.button {
+	transition: 0.4s;
+	padding: 10px 10px;
+	background: transparent;
+	color: #555;
+	border: 1px solid #555;
+
+	&:not(:last-child) {
+		margin-right: 40px;
+	}
+
+	&_color {
+
+		&.is-active {
+			padding: 10px 15px;
+			background: lightblue;
+			color: #333;
+			border: 1px solid lightblue;
+		}
+	}
+
+	&_bg {
+
+		&.is-active {
+			padding: 10px 15px;
+			background: lightblue;
+			color: #333;
+			border: 1px solid lightblue;
+		}
+	}
+}
+
+.work {
+	display: flex;
+	padding: 40px 15px 0;
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+	}
+
+	&__sliders {
+		flex: 1 1 50%;
+		padding: 0 40px 0 10px;
+	}
+
+	&__text {
+		flex: 1 1 50%;
+		padding: 0 10px;
+		transition: 0.2s;
+	}
+}
+
+.sliders {
+
+	&__item {
+		margin-bottom: 30px;
+
+		&_red-component {
+		}
+
+		&_green-component {
+		}
+
+		&_blue-component {
+		}
+	}
+}
+
+#red, #green, #blue {
+	border: 1px solid #888;
+}
+
+#red {
+	background: red;
+}
+
+#green {
+	background: green;
+}
+
+#blue {
+	background: blue;
+}
+
+.ui-draggable, .ui-droppable {
+	background-position: top;
+}
+
+.ui-slider-horizontal .ui-slider-range-max {
+	background: #fff;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+	border-radius: 50%;
+}
+
+
